@@ -58,17 +58,6 @@
 
         private void initControls()
         {
-            _mapSizeRememberLastRadioButton.Checked = !Properties.Settings.Default.MapWindowCustomSize;
-            _mapSizeCustomRadioButton.Checked = Properties.Settings.Default.MapWindowCustomSize;
-
-            _mapSizeCustomXTextBox.Text = Properties.Settings.Default.MapWindowWidth.ToString();
-            _mapSizeCustomYTextBox.Text = Properties.Settings.Default.MapWindowHeight.ToString();
-
-            _mapPositionRelativeRadioButton.Checked = !Properties.Settings.Default.MapWindowCustomPosition;
-            _mapPositionCustomRadioButton.Checked = Properties.Settings.Default.MapWindowCustomPosition;
-
-            _mapPositionXTextBox.Text = Properties.Settings.Default.MapWindowX.ToString();
-            _mapPositionYTextBox.Text = Properties.Settings.Default.MapWindowY.ToString();
 
             _bingoNoMaxSizeRadioButton.Checked = !Properties.Settings.Default.BingoBoardMaximumSize;
             _bingoCustomMaxSizeRadioButton.Checked = Properties.Settings.Default.BingoBoardMaximumSize;
@@ -84,12 +73,6 @@
             _hostServerCheckBox.Checked = Properties.Settings.Default.HostServerOnLaunch;
             _portTextBox.Text = Properties.Settings.Default.Port.ToString();
 
-            _mapSizeCustomRadioButton.CheckedChanged += (_, _) => updateSizeEnable();
-            _mapPositionCustomRadioButton.CheckedChanged += (_, _) => updatePositionEnable();
-            _bingoCustomMaxSizeRadioButton.CheckedChanged += (_, _) => updateMaxSizeEnable();
-
-            _swapMouseButtons.Checked = Properties.Settings.Default.FlipMouseButtons;
-            _showClassesCheckBox.Checked = Properties.Settings.Default.ShowClassesOnMap;
             _clickIncrementsCountCheckbox.Checked = Properties.Settings.Default.ClickIncrementsCountedSquares;
 
             _soundCheckBox.Checked = Properties.Settings.Default.PlaySounds;
@@ -100,22 +83,8 @@
 
             _delayMatchEventsTextBox.Text = Properties.Settings.Default.DelayMatchEvents.ToString();
 
-            updateSizeEnable();
-            updatePositionEnable();
             updateMaxSizeEnable();
             updateOutOfFocusText();
-        }
-
-        private void updateSizeEnable()
-        {
-            _mapSizeCustomXTextBox.Enabled = _mapSizeCustomRadioButton.Checked;
-            _mapSizeCustomYTextBox.Enabled = _mapSizeCustomRadioButton.Checked;
-        }
-
-        private void updatePositionEnable()
-        {
-            _mapPositionXTextBox.Enabled = _mapPositionCustomRadioButton.Checked;
-            _mapPositionYTextBox.Enabled = _mapPositionCustomRadioButton.Checked;
         }
 
         private void updateMaxSizeEnable()
@@ -126,26 +95,6 @@
 
         private bool saveSettings()
         {
-            if (!int.TryParse(_mapSizeCustomXTextBox.Text, out var mapWidth))
-            {
-                //Invalid x size
-                return false; 
-            }
-            if (!int.TryParse(_mapSizeCustomYTextBox.Text, out var mapHeight))
-            {
-                //Invalid y size
-                return false;
-            }
-            if (!int.TryParse(_mapPositionXTextBox.Text, out var mapX))
-            {
-                //Invalid x pos
-                return false;
-            }
-            if (!int.TryParse(_mapPositionYTextBox.Text, out var mapY))
-            {
-                //Invalid y pos
-                return false;
-            }
             if (!int.TryParse(_bingoMaxXTextBox.Text, out var bingoMaxWidth))
             {
                 //Invalid x size
@@ -166,12 +115,6 @@
                 //Invalid event delay
                 return false;
             }
-            Properties.Settings.Default.MapWindowCustomSize = _mapSizeCustomRadioButton.Checked;
-            Properties.Settings.Default.MapWindowCustomPosition = _mapPositionCustomRadioButton.Checked;
-            Properties.Settings.Default.MapWindowWidth = mapWidth;
-            Properties.Settings.Default.MapWindowHeight = mapHeight;
-            Properties.Settings.Default.MapWindowX = mapX;
-            Properties.Settings.Default.MapWindowY = mapY;
             Properties.Settings.Default.BingoBoardMaximumSize = _bingoCustomMaxSizeRadioButton.Checked;
             Properties.Settings.Default.BingoMaxSizeX = bingoMaxWidth;
             Properties.Settings.Default.BingoMaxSizeY = bingoMaxHeight;
@@ -185,8 +128,6 @@
             Properties.Settings.Default.Port = port;
             Properties.Settings.Default.HostServerOnLaunch = _hostServerCheckBox.Checked;
 
-            Properties.Settings.Default.FlipMouseButtons = _swapMouseButtons.Checked;
-            Properties.Settings.Default.ShowClassesOnMap = _showClassesCheckBox.Checked;
             Properties.Settings.Default.ClickIncrementsCountedSquares = _clickIncrementsCountCheckbox.Checked;
 
             Properties.Settings.Default.PlaySounds = _soundCheckBox.Checked;
@@ -200,11 +141,6 @@
 
             Properties.Settings.Default.Save();
             return true;
-        }
-
-        private void SettingsDialog_Load(object sender, EventArgs e)
-        {
-            _swapMouseButtons.Text = _swapMouseButtons.Text.Replace("***", "\r\n");
         }
 
         private void _outOfFocusClickTextBox_Enter(object sender, EventArgs e)
