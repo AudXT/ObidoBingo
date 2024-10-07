@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            _classesListBox = new CheckedListBox();
-            _classLimitCheckBox = new CheckBox();
             label2 = new Label();
-            _numClassesUpDown = new NumericUpDown();
             _maxCategoryUpDown = new NumericUpDown();
             _randomSeedUpDown = new NumericUpDown();
             label3 = new Label();
@@ -47,9 +44,7 @@
             panel2 = new Panel();
             panel3 = new Panel();
             panel4 = new Panel();
-            panel5 = new Panel();
             panel6 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)_numClassesUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_maxCategoryUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_randomSeedUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_preparationTimeUpDown).BeginInit();
@@ -58,7 +53,6 @@
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
-            panel5.SuspendLayout();
             panel6.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,27 +65,6 @@
             label1.TabIndex = 4;
             label1.Text = "Random seed:";
             // 
-            // _classesListBox
-            // 
-            _classesListBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _classesListBox.CheckOnClick = true;
-            _classesListBox.FormattingEnabled = true;
-            _classesListBox.Location = new Point(0, 29);
-            _classesListBox.Name = "_classesListBox";
-            _classesListBox.Size = new Size(231, 184);
-            _classesListBox.TabIndex = 17;
-            // 
-            // _classLimitCheckBox
-            // 
-            _classLimitCheckBox.AutoSize = true;
-            _classLimitCheckBox.Location = new Point(4, 4);
-            _classLimitCheckBox.Name = "_classLimitCheckBox";
-            _classLimitCheckBox.Size = new Size(138, 19);
-            _classLimitCheckBox.TabIndex = 15;
-            _classLimitCheckBox.Text = "Limit starting classes:";
-            _classLimitCheckBox.UseVisualStyleBackColor = true;
-            _classLimitCheckBox.CheckedChanged += _classLimitCheckBox_CheckedChanged;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -100,16 +73,6 @@
             label2.Size = new Size(169, 15);
             label2.TabIndex = 19;
             label2.Text = "Max squares in same category:";
-            // 
-            // _numClassesUpDown
-            // 
-            _numClassesUpDown.Location = new Point(145, 2);
-            _numClassesUpDown.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
-            _numClassesUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            _numClassesUpDown.Name = "_numClassesUpDown";
-            _numClassesUpDown.Size = new Size(62, 23);
-            _numClassesUpDown.TabIndex = 16;
-            _numClassesUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // _maxCategoryUpDown
             // 
@@ -243,23 +206,12 @@
             panel4.Size = new Size(239, 30);
             panel4.TabIndex = 11;
             // 
-            // panel5
-            // 
-            panel5.Controls.Add(_classLimitCheckBox);
-            panel5.Controls.Add(_numClassesUpDown);
-            panel5.Controls.Add(_classesListBox);
-            panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(0, 120);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(239, 216);
-            panel5.TabIndex = 14;
-            // 
             // panel6
             // 
             panel6.Controls.Add(label2);
             panel6.Controls.Add(_maxCategoryUpDown);
             panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(0, 336);
+            panel6.Location = new Point(0, 120);
             panel6.Name = "panel6";
             panel6.Size = new Size(239, 30);
             panel6.TabIndex = 18;
@@ -269,14 +221,12 @@
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             Controls.Add(panel6);
-            Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "GameSettingsControl";
-            Size = new Size(239, 367);
-            ((System.ComponentModel.ISupportInitialize)_numClassesUpDown).EndInit();
+            Size = new Size(239, 154);
             ((System.ComponentModel.ISupportInitialize)_maxCategoryUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)_randomSeedUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)_preparationTimeUpDown).EndInit();
@@ -289,8 +239,6 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ResumeLayout(false);
@@ -299,10 +247,7 @@
         #endregion
 
         private Label label1;
-        private CheckedListBox _classesListBox;
-        private CheckBox _classLimitCheckBox;
         private Label label2;
-        private NumericUpDown _numClassesUpDown;
         private NumericUpDown _maxCategoryUpDown;
         private NumericUpDown _randomSeedUpDown;
         private Label label3;
@@ -317,7 +262,6 @@
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private Panel panel5;
         private Panel panel6;
     }
 }

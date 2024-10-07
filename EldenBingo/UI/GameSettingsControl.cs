@@ -7,8 +7,6 @@ namespace EldenBingo.UI
         public GameSettingsControl()
         {
             InitializeComponent();
-            fillClassList();
-            updateEnabling();
             _randomSeedUpDown.ValueChanged += (o, e) => SeedChanged?.Invoke();
         }
 
@@ -37,35 +35,11 @@ namespace EldenBingo.UI
             set
             {
                 BoardSize = value.BoardSize;
-                for (int i = 0; i < _classesListBox.Items.Count; i++)
-                {
-                    _classesListBox.SetItemChecked(i, false);
-                }
                 _maxCategoryUpDown.Value = value.CategoryLimit;
                 _randomSeedUpDown.Value = value.RandomSeed;
                 _preparationTimeUpDown.Value = value.PreparationTime;
                 _bonusPointsUpDown.Value = value.PointsPerBingoLine;
-                updateEnabling();
             }
-        }
-
-        private void fillClassList()
-        {
-            foreach (var cl in Enum.GetValues(typeof(EldenRingClasses)))
-            {
-                _classesListBox.Items.Add(cl);
-            }
-        }
-
-        private void updateEnabling()
-        {
-            _numClassesUpDown.Enabled = _classLimitCheckBox.Checked;
-            _classesListBox.Enabled = _classLimitCheckBox.Checked;
-        }
-
-        private void _classLimitCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            updateEnabling();
         }
 
         private void button1_Click(object sender, EventArgs e)
