@@ -1,7 +1,7 @@
 ﻿using Neto.Shared;
 using System.Net.Sockets;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class BingoClientModel : ClientModel
     {

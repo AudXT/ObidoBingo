@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
-namespace EldenBingo.GameInterop
+namespace ObidoBingo.GameInterop
 {
     /// <summary>
     /// Pattern scan implementation 'LazySIMD' - by uberhalit

@@ -1,18 +1,18 @@
-using EldenBingo.GameInterop;
-using EldenBingo.Net;
-using EldenBingo.Properties;
-using EldenBingo.Rendering;
-using EldenBingo.Settings;
-using EldenBingo.Sfx;
-using EldenBingo.UI;
-using EldenBingo.Util;
-using EldenBingoCommon;
-using EldenBingoServer;
+using ObidoBingo.GameInterop;
+using ObidoBingo.Net;
+using ObidoBingo.Properties;
+using ObidoBingo.Rendering;
+using ObidoBingo.Settings;
+using ObidoBingo.Sfx;
+using ObidoBingo.UI;
+using ObidoBingo.Util;
+using ObidoBingoCommon;
+using ObidoBingoServer;
 using Neto.Shared;
 using SFML.System;
 using System.Security.Principal;
 
-namespace EldenBingo
+namespace ObidoBingo
 {
     public partial class MainForm : Form
     {
@@ -389,8 +389,7 @@ namespace EldenBingo
                 //If we got available classes in preparation phase, or within 20 seconds of the match starting -> Show the available classes
                 (_client.Room.Match.MatchStatus == MatchStatus.Preparation ||
                 _client.Room.Match.MatchStatus == MatchStatus.Running && _client.Room.Match.MatchMilliseconds < 20000)
-                )
-                _mapWindow.ShowAvailableClasses(bingoBoardArgs.AvailableClasses);
+                );
         }
 
         private void userCheckedSquare(ClientModel? _, ServerUserChecked userCheckedSquareArgs)

@@ -1,6 +1,6 @@
 ﻿using SFML.Graphics;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     public static class SpriteShader
     {

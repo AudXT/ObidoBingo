@@ -1,12 +1,12 @@
-﻿using EldenBingo.GameInterop;
-using EldenBingo.Rendering.Game;
-using EldenBingoCommon;
+﻿using ObidoBingo.GameInterop;
+using ObidoBingo.Rendering.Game;
+using ObidoBingoCommon;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 using System.ComponentModel;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public enum ToolMode
     {

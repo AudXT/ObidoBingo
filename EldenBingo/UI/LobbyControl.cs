@@ -1,9 +1,9 @@
-﻿using EldenBingo.Net;
-using EldenBingoCommon;
+﻿using ObidoBingo.Net;
+using ObidoBingoCommon;
 using Microsoft.VisualBasic.ApplicationServices;
 using Neto.Shared;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal partial class LobbyControl : ClientUserControl
     {
@@ -133,22 +133,9 @@ namespace EldenBingo.UI
 
         private void gotBingoBoard(ClientModel? _, ServerEntireBingoBoardUpdate bingoBoardArgs)
         {
-            if (bingoBoardArgs.AvailableClasses.Length <= 0)
-                return;
 
-            var prep = bingoBoardArgs.AvailableClasses.Length == 1 ? "Required class is:" : "Valid classes are:";
             var strings = new List<string>();
             var colors = new List<Color?>();
-            foreach (var cl in bingoBoardArgs.AvailableClasses)
-            {
-                if (strings.Count == 0)
-                    strings.Add(prep);
-                else
-                    strings.Add(",");
-                strings.Add(cl.ToString());
-                colors.Add(null);
-                colors.Add(BingoConstants.ClassColors[(int)cl]);
-            }
             colors.Add(null);
             updateMatchLog(strings.ToArray(), colors.ToArray(), false);
         }

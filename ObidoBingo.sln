@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EldenBingo", "EldenBingo\EldenBingo.csproj", "{F87548CB-0BFD-4E46-B6F6-0A80AE958437}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObidoBingo", "EldenBingo\ObidoBingo.csproj", "{F87548CB-0BFD-4E46-B6F6-0A80AE958437}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EldenBingoServer", "EldenBingoServer\EldenBingoServer.csproj", "{82C6E896-54C8-46C8-B0CE-FF949E59D893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObidoBingoServer", "EldenBingoServer\ObidoBingoServer.csproj", "{82C6E896-54C8-46C8-B0CE-FF949E59D893}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EldenBingoCommon", "EldenBingoCommon\EldenBingoCommon.csproj", "{FF8B4A51-E3EE-4FA4-9C5F-50730F989D9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObidoBingoCommon", "EldenBingoCommon\ObidoBingoCommon.csproj", "{FF8B4A51-E3EE-4FA4-9C5F-50730F989D9D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EldenBingoServerStandalone", "EldenBingoServerStandalone\EldenBingoServerStandalone.csproj", "{A19746B6-B22C-4EC5-9C9A-EFF8EFE489ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObidoBingoServerStandalone", "EldenBingoServerStandalone\ObidoBingoServerStandalone.csproj", "{A19746B6-B22C-4EC5-9C9A-EFF8EFE489ED}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neto", "Neto\Neto.csproj", "{3EE2FFF2-52F6-4A37-8E44-FAC1C863ADD0}"
 EndProject

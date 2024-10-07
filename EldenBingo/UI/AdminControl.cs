@@ -1,13 +1,13 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
-using EldenBingo.Net;
-using EldenBingo.Settings;
-using EldenBingoCommon;
+using ObidoBingo.Net;
+using ObidoBingo.Settings;
+using ObidoBingoCommon;
 using Neto.Shared;
 using Newtonsoft.Json;
 using System.Globalization;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal partial class AdminControl : ClientUserControl
     {

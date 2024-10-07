@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.UI
+﻿namespace ObidoBingo.UI
 {
     partial class BingoControl
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._gridControl = new EldenBingo.UI.GridControl();
+            this._gridControl = new ObidoBingo.UI.GridControl();
             this._boardStatusLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 

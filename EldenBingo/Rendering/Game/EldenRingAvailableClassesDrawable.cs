@@ -1,7 +1,7 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using SFML.Graphics;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     internal class EldenRingAvailableClassesDrawable : RenderLayer
     {

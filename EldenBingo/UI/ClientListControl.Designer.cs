@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.UI
+﻿namespace ObidoBingo.UI
 {
     partial class ClientListControl
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this._clientList = new EldenBingo.UI.RichListBox();
+            this._clientList = new ObidoBingo.UI.RichListBox();
             this.SuspendLayout();
             // 
             // _clientList

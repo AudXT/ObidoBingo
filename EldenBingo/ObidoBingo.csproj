@@ -36,8 +36,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EldenBingoCommon\EldenBingoCommon.csproj" />
-    <ProjectReference Include="..\EldenBingoServer\EldenBingoServer.csproj" />
+    <ProjectReference Include="..\EldenBingoCommon\ObidoBingoCommon.csproj" />
+    <ProjectReference Include="..\EldenBingoServer\ObidoBingoServer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

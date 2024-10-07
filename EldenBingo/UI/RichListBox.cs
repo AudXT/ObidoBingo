@@ -1,6 +1,6 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal class RichListBox : ListBox
     {

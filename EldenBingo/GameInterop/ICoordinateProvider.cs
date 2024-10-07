@@ -1,6 +1,6 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 
-namespace EldenBingo.GameInterop
+namespace ObidoBingo.GameInterop
 {
     public interface ICoordinateProvider
     {

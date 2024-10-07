@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.GameInterop
+﻿namespace ObidoBingo.GameInterop
 {
     /// <summary>
     /// Returns address of pattern using 'NaiveFor' implementation by uberhalit. Can match 0.

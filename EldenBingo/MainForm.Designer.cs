@@ -1,4 +1,4 @@
-﻿namespace EldenBingo
+﻿namespace ObidoBingo
 {
     partial class MainForm
     {

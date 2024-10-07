@@ -1,9 +1,9 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Neto.Shared;
 using System.ComponentModel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal class ScoreboardControl : ClientUserControl
     {

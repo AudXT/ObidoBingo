@@ -1,6 +1,6 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class BingoClientInRoom : UserInRoom
     {

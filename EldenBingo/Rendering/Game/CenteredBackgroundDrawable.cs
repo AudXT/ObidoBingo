@@ -1,7 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     public class CenteredBackgroundDrawable : IDrawable
     {

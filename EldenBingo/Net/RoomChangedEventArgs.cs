@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.Net
+﻿namespace ObidoBingo.Net
 {
     internal class RoomChangedEventArgs : EventArgs
     {

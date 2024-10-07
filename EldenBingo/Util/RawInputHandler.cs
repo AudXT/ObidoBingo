@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace EldenBingo.Util
+namespace ObidoBingo.Util
 {
     public class RawInputHandler
     {

@@ -1,7 +1,7 @@
-using EldenBingo.Util;
-using EldenBingoCommon;
+using ObidoBingo.Util;
+using ObidoBingoCommon;
 
-namespace EldenBingo
+namespace ObidoBingo
 {
     internal static class Program
     {

@@ -1,11 +1,11 @@
-﻿using EldenBingo.Net;
-using EldenBingo.Util;
-using EldenBingoCommon;
+﻿using ObidoBingo.Net;
+using ObidoBingo.Util;
+using ObidoBingoCommon;
 using Neto.Shared;
 using System.Drawing.Drawing2D;
 using System.Timers;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal partial class BingoControl : ClientUserControl
     {

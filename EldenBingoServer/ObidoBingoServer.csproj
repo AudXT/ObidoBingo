@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EldenBingoCommon\EldenBingoCommon.csproj" />
+    <ProjectReference Include="..\EldenBingoCommon\ObidoBingoCommon.csproj" />
     <ProjectReference Include="..\Neto\Neto.csproj" />
   </ItemGroup>
 

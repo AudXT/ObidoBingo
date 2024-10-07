@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal class RichTextBoxCustom : RichTextBox
     {

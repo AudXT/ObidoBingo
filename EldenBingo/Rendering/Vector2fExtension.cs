@@ -1,7 +1,7 @@
 ﻿using SFML.System;
 using System.Runtime.CompilerServices;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     internal static class Vector2fExtension
     {

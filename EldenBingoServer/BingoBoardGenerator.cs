@@ -1,7 +1,7 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Newtonsoft.Json.Linq;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class BingoBoardGenerator
     {

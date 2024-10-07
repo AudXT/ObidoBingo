@@ -1,4 +1,4 @@
-﻿namespace EldenBingoServer
+﻿namespace ObidoBingoServer
 {
     public class RoomEventArgs : EventArgs
     {

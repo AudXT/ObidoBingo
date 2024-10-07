@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Concurrent;
 
-namespace EldenBingoCommon
+namespace ObidoBingoCommon
 {
     public class Room<T> where T : UserInRoom
     {

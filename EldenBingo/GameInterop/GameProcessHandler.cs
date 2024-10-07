@@ -1,4 +1,4 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Microsoft.Win32;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -6,7 +6,7 @@ using System.Security.Principal;
 using System.ServiceProcess;
 using System.Text.RegularExpressions;
 
-namespace EldenBingo.GameInterop
+namespace ObidoBingo.GameInterop
 {
     public enum GameRunningStatus
     {

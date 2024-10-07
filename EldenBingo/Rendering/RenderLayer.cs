@@ -2,7 +2,7 @@
 using SFML.System;
 using SFML.Window;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public class RenderLayer : IUpdateable, IDrawable
     {

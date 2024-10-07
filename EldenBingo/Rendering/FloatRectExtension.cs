@@ -1,7 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.System;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public static class FloatRectExtension
     {

@@ -1,4 +1,4 @@
-namespace EldenBingo.GameInterop;
+namespace ObidoBingo.GameInterop;
 
 public static class MachineCode {
     public const int EventFlagManOffset = 0x2;

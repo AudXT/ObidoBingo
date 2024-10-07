@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EldenBingoServer\EldenBingoServer.csproj" />
+    <ProjectReference Include="..\EldenBingoServer\ObidoBingoServer.csproj" />
     <ProjectReference Include="..\InteractiveReadLine\InteractiveReadLine.csproj" />
   </ItemGroup>
 

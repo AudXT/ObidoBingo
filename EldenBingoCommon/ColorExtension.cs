@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace EldenBingoCommon
+namespace ObidoBingoCommon
 {
     public static class ColorExtension
     {

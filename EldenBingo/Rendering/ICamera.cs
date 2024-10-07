@@ -1,6 +1,6 @@
 ﻿using SFML.System;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public interface ICamera : IUpdateable
     {

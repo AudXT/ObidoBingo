@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.GameInterop
+﻿namespace ObidoBingo.GameInterop
 {
     internal static class GameData
     {

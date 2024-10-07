@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.UI
+﻿namespace ObidoBingo.UI
 {
     public class HotkeyEventArgs : EventArgs
     {

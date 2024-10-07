@@ -1,6 +1,6 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 
-namespace EldenBingo.Settings
+namespace ObidoBingo.Settings
 {
     internal static class GameSettingsHelper
     {

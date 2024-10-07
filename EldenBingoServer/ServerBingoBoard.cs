@@ -1,8 +1,8 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class CheckStatus
     {

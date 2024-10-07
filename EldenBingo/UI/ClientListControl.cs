@@ -1,8 +1,8 @@
-﻿using EldenBingo.Net;
-using EldenBingoCommon;
+﻿using ObidoBingo.Net;
+using ObidoBingoCommon;
 using Neto.Shared;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     internal partial class ClientListControl : ClientUserControl
     {

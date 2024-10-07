@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace EldenBingoCommon
+namespace ObidoBingoCommon
 {
     public enum MatchStatus
     {

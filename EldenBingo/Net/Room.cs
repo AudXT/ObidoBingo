@@ -1,6 +1,6 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 
-namespace EldenBingo.Net
+namespace ObidoBingo.Net
 {
     internal class Room : Room<UserInRoom>
     {

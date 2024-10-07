@@ -1,9 +1,9 @@
-﻿using EldenBingo.GameInterop;
-using EldenBingoCommon;
+﻿using ObidoBingo.GameInterop;
+using ObidoBingoCommon;
 using SFML.Graphics;
 using SFML.System;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     public class PlayerDrawable : IDrawable, IUpdateable
     {

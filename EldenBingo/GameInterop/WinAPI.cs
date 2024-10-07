@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace EldenBingo.GameInterop
+namespace ObidoBingo.GameInterop
 {
     internal class WinAPI
     {

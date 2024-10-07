@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.Rendering
+﻿namespace ObidoBingo.Rendering
 {
     internal class JPEGPicture
     {

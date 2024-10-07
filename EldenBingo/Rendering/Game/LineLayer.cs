@@ -3,7 +3,7 @@ using SFML.Graphics.Glsl;
 using SFML.System;
 using SFML.Window;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     public class LineLayer : RenderLayer
     {

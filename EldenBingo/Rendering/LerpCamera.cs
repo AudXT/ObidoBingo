@@ -1,7 +1,7 @@
 ﻿using SFML.System;
 using View = SFML.Graphics.View;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public class LerpCamera : ICamera
     {

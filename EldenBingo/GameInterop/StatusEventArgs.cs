@@ -1,4 +1,4 @@
-﻿namespace EldenBingo
+﻿namespace ObidoBingo
 {
     public class StatusEventArgs : EventArgs
     {

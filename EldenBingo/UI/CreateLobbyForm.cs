@@ -1,8 +1,8 @@
-﻿using EldenBingo.Settings;
-using EldenBingoCommon;
+﻿using ObidoBingo.Settings;
+using ObidoBingoCommon;
 using Neto.Shared;
 
-namespace EldenBingo.UI
+namespace ObidoBingo.UI
 {
     public partial class CreateLobbyForm : Form
     {

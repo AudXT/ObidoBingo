@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EldenBingoCommon
+namespace ObidoBingoCommon
 {
     public class BingoBoard
     {
@@ -14,9 +14,7 @@ namespace EldenBingoCommon
 
         public int Size { get; init; }
         public int SquareCount => Size * Size;
-        public BingoBoardSquare[] Squares { get; init; }
-        public EldenRingClasses[] AvailableClasses { get; init; }
-        
+        public BingoBoardSquare[] Squares { get; init; }        
     }
 
     public record struct BingoBoardSquare(string Text, string Tooltip, int MaxCount, int? Team, bool Marked, SquareCounter[] Counters)

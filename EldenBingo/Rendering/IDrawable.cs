@@ -1,6 +1,6 @@
 ﻿using SFML.Graphics;
 
-namespace EldenBingo.Rendering
+namespace ObidoBingo.Rendering
 {
     public interface IDrawable : Drawable
     {

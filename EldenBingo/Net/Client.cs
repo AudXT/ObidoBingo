@@ -1,10 +1,10 @@
-﻿using EldenBingo.Net;
-using EldenBingoCommon;
+﻿using ObidoBingo.Net;
+using ObidoBingoCommon;
 using Neto.Client;
 using Neto.Shared;
 using System.Reflection;
 
-namespace EldenBingo
+namespace ObidoBingo
 {
     public class Client : NetoClient
     {
@@ -43,7 +43,7 @@ namespace EldenBingo
         public UserInRoom? LocalUser { get; private set; }
         public BingoBoard? BingoBoard => Room?.Match.Board;
 
-        public override string Version => EldenBingoCommon.Version.CurrentVersion;
+        public override string Version => ObidoBingoCommon.Version.CurrentVersion;
 
         internal Room? Room
         {

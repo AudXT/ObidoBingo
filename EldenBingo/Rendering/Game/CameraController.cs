@@ -2,7 +2,7 @@
 using SFML.System;
 using SFML.Window;
 
-namespace EldenBingo.Rendering.Game
+namespace ObidoBingo.Rendering.Game
 {
     public enum CameraMode
     {

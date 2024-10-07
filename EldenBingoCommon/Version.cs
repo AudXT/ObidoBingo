@@ -1,4 +1,4 @@
-﻿namespace EldenBingoCommon
+﻿namespace ObidoBingoCommon
 {
     public static class Version
     {

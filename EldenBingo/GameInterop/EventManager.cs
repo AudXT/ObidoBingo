@@ -1,7 +1,7 @@
-using EldenBingoCommon;
+using ObidoBingoCommon;
 using Neto.Shared;
 
-namespace EldenBingo.GameInterop;
+namespace ObidoBingo.GameInterop;
 
 public class EventManager
 {

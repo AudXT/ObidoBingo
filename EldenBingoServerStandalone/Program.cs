@@ -1,5 +1,5 @@
-﻿using EldenBingoCommon;
-using EldenBingoServer;
+﻿using ObidoBingoCommon;
+using ObidoBingoServer;
 using InteractiveReadLine;
 using Neto.Shared;
 

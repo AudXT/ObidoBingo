@@ -1,10 +1,10 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Neto.Shared;
 using Newtonsoft.Json;
 using System.Runtime.Serialization;
 using System.Timers;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class ServerRoom : Room<BingoClientInRoom>
     {

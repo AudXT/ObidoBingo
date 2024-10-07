@@ -1,9 +1,9 @@
-﻿using EldenBingo.Net;
-using EldenBingo.Rendering;
-using EldenBingoCommon;
+﻿using ObidoBingo.Net;
+using ObidoBingo.Rendering;
+using ObidoBingoCommon;
 using Neto.Shared;
 
-namespace EldenBingo.GameInterop
+namespace ObidoBingo.GameInterop
 {
     internal class MapCoordinateProviderHandler
     {

@@ -1,4 +1,4 @@
-﻿using EldenBingoCommon;
+﻿using ObidoBingoCommon;
 using Neto.Server;
 using Neto.Shared;
 using Newtonsoft.Json.Serialization;
@@ -7,7 +7,7 @@ using System.Collections.Concurrent;
 using System.Drawing;
 using System.Reflection;
 
-namespace EldenBingoServer
+namespace ObidoBingoServer
 {
     public class Server : NetoServer<BingoClientModel>
     {
@@ -70,7 +70,7 @@ namespace EldenBingoServer
             }
         }
 
-        public override string Version => EldenBingoCommon.Version.CurrentVersion;
+        public override string Version => ObidoBingoCommon.Version.CurrentVersion;
         public IEnumerable<ServerRoom> Rooms => _rooms.Values;
 
         public void EnableMaintenanceMode(string message)
@@ -517,7 +517,7 @@ namespace EldenBingoServer
             {
                 if (matchStatus.MatchStatus == MatchStatus.Starting)
                 {
-                    var p = new Packet(new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>(), Array.Empty<EldenRingClasses>()));
+                    var p = new Packet(new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>()));
                     //Reset the board for all players (except AdminSpectators, who already have the new board)
                     await SendPacketToClients(p, sender.Room.ClientModels.Where(c => !(c.IsAdmin && c.IsSpectator)));
                 }
@@ -733,9 +733,9 @@ namespace EldenBingoServer
         private ServerEntireBingoBoardUpdate createEntireBoardPacket(ServerBingoBoard? board, UserInRoom user)
         {
             if (board == null)
-                return new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>(), Array.Empty<EldenRingClasses>());
+                return new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>());
             var squareData = board.GetSquareDataForUser(user);
-            return new ServerEntireBingoBoardUpdate(board.Size, squareData, board.AvailableClasses);
+            return new ServerEntireBingoBoardUpdate(board.Size, squareData);
         }
 
         private ServerScoreboardUpdate createScoreboardUpdatePacket(ServerRoom room)
@@ -861,7 +861,7 @@ namespace EldenBingoServer
             if (room.Match?.Board == null || room.Match?.Board is not ServerBingoBoard board)
             {
                 //No board set, so we send an empty board
-                await sendPacketToRoom(new Packet(new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>(), Array.Empty<EldenRingClasses>())), room);
+                await sendPacketToRoom(new Packet(new ServerEntireBingoBoardUpdate(0, Array.Empty<BingoBoardSquare>())), room);
                 return;
             }
 

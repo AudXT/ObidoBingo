@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.Util
+﻿namespace ObidoBingo.Util
 {
     public static class CrashLogger
     {

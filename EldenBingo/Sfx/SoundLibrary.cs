@@ -1,4 +1,4 @@
-﻿namespace EldenBingo.Sfx
+﻿namespace ObidoBingo.Sfx
 {
     public enum SoundType
     {
