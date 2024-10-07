@@ -557,5 +557,10 @@ namespace EldenBingo.UI
                 updateMatchLog(ex.Message, Color.Red, false);
             }
         }
+
+        private void adminControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

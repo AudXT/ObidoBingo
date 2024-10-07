@@ -53,7 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Upload Bingo JSON:";
+            this.label1.Text = "Upload Bingo File:";
             // 
             // _bingoJsonTextBox
             // 

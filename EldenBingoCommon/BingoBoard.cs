@@ -4,13 +4,12 @@ namespace EldenBingoCommon
 {
     public class BingoBoard
     {
-        public BingoBoard(int size, BingoBoardSquare[] squares, EldenRingClasses[] availableClasses)
+        public BingoBoard(int size, BingoBoardSquare[] squares)
         {
             Size = size;
             if (squares.Length != size * size)
                 throw new ArgumentException($"Needs exactly {size * size} squares");
             Squares = squares;
-            AvailableClasses = availableClasses;
         }
 
         public int Size { get; init; }

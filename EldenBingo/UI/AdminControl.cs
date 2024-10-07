@@ -1,7 +1,11 @@
-﻿using EldenBingo.Net;
+﻿using CsvHelper;
+using CsvHelper.Configuration;
+using EldenBingo.Net;
 using EldenBingo.Settings;
 using EldenBingoCommon;
 using Neto.Shared;
+using Newtonsoft.Json;
+using System.Globalization;
 
 namespace EldenBingo.UI
 {
@@ -57,7 +61,7 @@ namespace EldenBingo.UI
             var dir = Path.GetDirectoryName(file);
             var dialog = new OpenFileDialog()
             {
-                Filter = ".Json Files (*.json)|*.json|All Files (*.*)|*.*",
+                Filter = ".Json and .CSV Files|*.json;*.csv|All Files|*.*",
                 InitialDirectory = string.IsNullOrWhiteSpace(dir) ? Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) : dir,
                 FileName = string.IsNullOrWhiteSpace(file) || !File.Exists(file) ? string.Empty : _bingoJsonTextBox.Text,
             };
@@ -252,7 +256,11 @@ namespace EldenBingo.UI
             }
             try
             {
-                string json = File.ReadAllText(file);
+                string json = string.Empty;
+                if(file.Contains(".csv"))
+                    json = CsvToJson(file);
+                else
+                    json = File.ReadAllText(file);
                 errorProvider1.SetError(_bingoJsonTextBox, null);
                 errorProvider1.SetError(_uploadJsonButton, null);
 
@@ -264,6 +272,51 @@ namespace EldenBingo.UI
                 errorProvider1.SetError(_bingoJsonTextBox, $"Could not read file: {ex.Message}");
             }
         }
+
+        private string CsvToJson(string csvFile)
+        {
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                HasHeaderRecord = true,
+            };
+
+            using (var reader = new StreamReader(csvFile))
+            using (var csv = new CsvReader(reader, config))
+            {
+                var csvRecords = csv.GetRecords<BingoCSV>();                        
+                var records = new List<Dictionary<string, string>>();
+
+                foreach(var csvRecord in csvRecords)
+                {
+                    var record = new Dictionary<string, string>();
+
+                    var value = int.TryParse(csvRecord.Completed, out int parsedValue) ? parsedValue : 0;
+
+                    if (csvRecord.Repeatability == "No" && value > 0)
+                    {
+                        continue;
+                    }
+                    
+                    records.Add(new Dictionary<string, string>
+                    {
+                        { "category", csvRecord.Game },
+                        { "name", $"{csvRecord.Game}: {csvRecord.Challenge}" }
+                    });
+                    
+                }
+
+                return JsonConvert.SerializeObject(records, Formatting.Indented);
+            }
+        }
+
+        public class BingoCSV
+        {
+            public string Game { get; set; }
+            public string Challenge { get; set; }
+            public string Repeatability { get; set; }
+            public string Completed { get; set; }
+        }
+
 
         private async void _lobbySettingsButton_Click(object sender, EventArgs e)
         {

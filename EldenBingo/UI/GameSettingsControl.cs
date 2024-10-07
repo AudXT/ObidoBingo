@@ -26,16 +26,8 @@ namespace EldenBingo.UI
         {
             get
             {
-                var classSet = new HashSet<EldenRingClasses>();
-                foreach (var checkedClass in _classesListBox.CheckedIndices)
-                {
-                    classSet.Add((EldenRingClasses)checkedClass);
-                }
                 return new BingoGameSettings(
                     BoardSize,
-                    _classLimitCheckBox.Checked,
-                    classSet,
-                    Convert.ToInt32(_numClassesUpDown.Value),//Number of classes to pick
                     Convert.ToInt32(_maxCategoryUpDown.Value),//Max number of squares in the same category
                     Convert.ToInt32(_randomSeedUpDown.Value), //Random seed
                     Convert.ToInt32(_preparationTimeUpDown.Value), //Preparation time in seconds
@@ -49,12 +41,6 @@ namespace EldenBingo.UI
                 {
                     _classesListBox.SetItemChecked(i, false);
                 }
-                _classLimitCheckBox.Checked = value.RandomClasses;
-                foreach (var checkedClass in value.ValidClasses)
-                {
-                    _classesListBox.SetItemChecked((int)checkedClass, true);
-                }
-                _numClassesUpDown.Value = value.NumberOfClasses;
                 _maxCategoryUpDown.Value = value.CategoryLimit;
                 _randomSeedUpDown.Value = value.RandomSeed;
                 _preparationTimeUpDown.Value = value.PreparationTime;

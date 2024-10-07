@@ -113,7 +113,7 @@ namespace EldenBingoServer
 
     public class ServerBingoBoard : BingoBoard
     {
-        public ServerBingoBoard(ServerRoom room, int size, BingoBoardSquare[] squares, EldenRingClasses[] availableClasses) : base(size, squares, availableClasses)
+        public ServerBingoBoard(ServerRoom room, int size, BingoBoardSquare[] squares) : base(size, squares)
         {
             var sizeSqr = size * size;
             CheckStatus = new CheckStatus[sizeSqr];

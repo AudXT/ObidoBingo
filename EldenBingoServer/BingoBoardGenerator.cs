@@ -113,17 +113,7 @@ namespace EldenBingoServer
                 squares = shuffleList(squares, _random).ToList();
             balanceBoard(squares);
 
-            EldenRingClasses[] classes;
             //Always randomize classes, even if they're not needed - to ensure consistency in random number generation
-            if (room.GameSettings.RandomClasses && room.GameSettings.NumberOfClasses > 0)
-            {
-                classes = randomizeAvailableClasses(room.GameSettings.ValidClasses, room.GameSettings.NumberOfClasses);
-            }
-            else
-            {
-                classes = Array.Empty<EldenRingClasses>();
-                _random.Next(); //Skip a number to ensure consistency in random number generation
-            }
             return new ServerBingoBoard(room,
                 room.GameSettings.BoardSize,
                 squares.Select(s => 
@@ -135,8 +125,7 @@ namespace EldenBingoServer
                         false, 
                         Array.Empty<SquareCounter>()
                     )
-                ).ToArray(), 
-            classes);
+                ).ToArray());
         }
 
         private EldenRingClasses[] randomizeAvailableClasses(IEnumerable<EldenRingClasses> availableClasses, int numberOfClasses)

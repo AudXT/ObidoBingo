@@ -313,7 +313,6 @@ namespace EldenBingoServer
         {
             settings.BoardSize = Math.Clamp(settings.BoardSize, 3, 8);
             settings.PreparationTime = Math.Max(0, settings.PreparationTime);
-            settings.NumberOfClasses = Math.Max(1, settings.NumberOfClasses);
             settings.CategoryLimit = Math.Max(0, settings.CategoryLimit);
             return settings;
         }
