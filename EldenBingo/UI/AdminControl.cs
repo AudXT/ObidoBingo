@@ -258,7 +258,16 @@ namespace ObidoBingo.UI
             {
                 string json = string.Empty;
                 if(file.Contains(".csv"))
-                    json = CsvToJson(file);
+                {
+                    try
+                    {
+                        json = CsvToJson(file);
+                    }
+                    catch (Exception ex)
+                    {
+                        errorProvider1.SetError(_bingoJsonTextBox, $"Could not convert CSV to JSON: {ex.Message}");
+                    }
+                }    
                 else
                     json = File.ReadAllText(file);
                 errorProvider1.SetError(_bingoJsonTextBox, null);
