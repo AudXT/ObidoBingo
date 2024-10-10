@@ -296,6 +296,11 @@ namespace ObidoBingo.UI
                     {
                         continue;
                     }
+
+                    if (csvRecord.Excluded == "Yes")
+                    {
+                        continue;
+                    }
                     
                     records.Add(new Dictionary<string, string>
                     {
@@ -315,6 +320,7 @@ namespace ObidoBingo.UI
             public string Challenge { get; set; }
             public string Repeatability { get; set; }
             public string Completed { get; set; }
+            public string Excluded { get; set; }
         }
 
 
