@@ -293,11 +293,11 @@ namespace ObidoBingo.UI
             using (var csv = new CsvReader(reader, config))
             {
                 var csvRecords = csv.GetRecords<BingoCSV>();                        
-                var records = new List<Dictionary<string, string>>();
+                var records = new List<Dictionary<string, object>>();
 
                 foreach(var csvRecord in csvRecords)
                 {
-                    var record = new Dictionary<string, string>();
+                    var record = new Dictionary<string, object>();
 
                     var value = int.TryParse(csvRecord.Completed, out int parsedValue) ? parsedValue : 0;
 
@@ -310,13 +310,19 @@ namespace ObidoBingo.UI
                     {
                         continue;
                     }
-                    
-                    records.Add(new Dictionary<string, string>
+
+                    if (!string.IsNullOrEmpty(csvRecord.Categories))
                     {
-                        { "category", csvRecord.Game },
-                        { "name", $"{csvRecord.Game}: {csvRecord.Challenge}" }
-                    });
-                    
+                        var categories = csvRecord.Categories.Split(",").Select(c => c.Trim()).ToList();
+                        record.Add("categories", categories);
+                    }
+                    else
+                    {
+                        record.Add("category", csvRecord.Game);
+                    }
+
+                    record.Add("name", $"{csvRecord.Game}: {csvRecord.Challenge}");
+                    records.Add(record);
                 }
 
                 return JsonConvert.SerializeObject(records, Formatting.Indented);
@@ -330,6 +336,7 @@ namespace ObidoBingo.UI
             public string Repeatability { get; set; }
             public string Completed { get; set; }
             public string Excluded { get; set; }
+            public string Categories { get; set; }
         }
 
 
