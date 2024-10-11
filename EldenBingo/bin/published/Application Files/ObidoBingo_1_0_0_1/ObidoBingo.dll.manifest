@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ObidoBingo.exe" version="1.0.0.1" publicKeyToken="91a004de99eef0a5" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe" size="17336">
+      <assemblyIdentity name="Launcher" version="8.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>CNgWxEA8i4EZNhMcRZTVn4mdc4pq6snppyoUheslGM8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CsvHelper.dll" size="225280">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DxZ6E9coKPgSeTCNJm2BHyvowsQw3HLoE4Lu8gInUQo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="icon.ico" size="34494">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tf4A81UQtxQ/KSzrfiJrsOtLN8N4XQ2o38hwU8ZUzNQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MessagePack.Annotations.dll" size="11776">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PBHVWbllVP8ziXJUElMcrgf/nI/LOb9MQAoWlf+lPbk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MessagePack.dll" size="326144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>no+2qwplYHnZ5ZfUxmi6ds1XmcVFjqUOYoz+i1v4Yo8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Microsoft.NET.StringTools.dll" size="30336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wRZfYaSuN9sU0+k7yhFCiQt0RM4KsfzrDvIwNjAaJmU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Neto.dll" size="59904">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tdxw1wvdSjS/raeSfb3ty0btw7z8yDZFYHwzmTxR404=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Newtonsoft.Json.dll" size="712464">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IsZJ91/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingo.deps.json" size="21930">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8oo5OinKeQw29/piRhSkg5rjuwVE4YbpNcQVCsVHaIQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingo.dll" size="337848">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Za4+zL/kjRsMO17XMPgd1PS/IAR11G4/Y+HQEAPz6uY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingo.dll.config" size="6431">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TIjP5iPZCKXyn4+UneRPAcR5K51CYSAIErBoc3fQl8s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingo.exe" size="189880">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QYufXT7sW+TSiomMwHjqrjb2gQivLHrDrmXF8cr7QK0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingo.runtimeconfig.json" size="372">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HsoPDHAHCqg7tgnkt0mybctECXhDJgMnJjlHIiJKCYo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingoCommon.dll" size="68608">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qVBc/W/LNXOFi48MMSMIuXRJEKoOD76wlUjkYvoIyBA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ObidoBingoServer.dll" size="72704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SJc5rwRlFg5RIhjfWTwMgeKV5AMmpP2YDj1O2QbmhNw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libcsfml-audio.so" size="56912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r1hgjd8rzQDN7QqlGSXAq15d602cLYXXFyzn98it4Ac=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libcsfml-graphics.so" size="207584">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xTjqU0CJRLQ5MsNJRHCn/oQVqsBLXom5IbA+v3MsWyo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libcsfml-system.so" size="16216">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q3ehW5KAB8tcbF9GfA6MUjIvoRnH1DNHFRJMdpQE3LM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libcsfml-window.so" size="38616">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3l7xDvZySdGIPfsxT6xW4A2smYMH/oc80s7rCM3pWA8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-audio.so" size="144552">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cxCIlqqBVzgGkZvcNLYdTLZZ+iqRp3E7yi4FxP/BII0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-audio.so.2.5" size="144552">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cxCIlqqBVzgGkZvcNLYdTLZZ+iqRp3E7yi4FxP/BII0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-audio.so.2.5.1" size="144552">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cxCIlqqBVzgGkZvcNLYdTLZZ+iqRp3E7yi4FxP/BII0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-graphics.so" size="477424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mXvR+Gb355b0LtEsIO6+oqNoMap13ppQFjagf8i6eBI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-graphics.so.2.5" size="477424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mXvR+Gb355b0LtEsIO6+oqNoMap13ppQFjagf8i6eBI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-graphics.so.2.5.1" size="477424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mXvR+Gb355b0LtEsIO6+oqNoMap13ppQFjagf8i6eBI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-system.so" size="69528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zFAr3V/jj8ZQmAZq57agmYbjWd94IgWek4hm3jHcLzQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-system.so.2.5" size="69528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zFAr3V/jj8ZQmAZq57agmYbjWd94IgWek4hm3jHcLzQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-system.so.2.5.1" size="69528">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zFAr3V/jj8ZQmAZq57agmYbjWd94IgWek4hm3jHcLzQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-window.so" size="209456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bgAgK4q7UD+M80nyq/G6YsZEjvg4MpYSnRRPCtu63C8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-window.so.2.5" size="209456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bgAgK4q7UD+M80nyq/G6YsZEjvg4MpYSnRRPCtu63C8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\alpine-x64\native\libsfml-window.so.2.5.1" size="209456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bgAgK4q7UD+M80nyq/G6YsZEjvg4MpYSnRRPCtu63C8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libcsfml-audio.so" size="56664">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sGiFptQwAulZpu8XGzFyPqLgHYuv5/Wie0WOZdE71kE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libcsfml-graphics.so" size="204912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hmXaQ47D63Rx5NAYOzeR4tK4mcvwU4BPgrc99fAj3ec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libcsfml-system.so" size="15152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MNCV2JrdAxjGW614OPRd8Kk/3dQJa+lAq4z7zienoog=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libcsfml-window.so" size="38056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/Pso1z1gG2pkXL2IUIGRvH50zz4o8Y/qzWwD31fJJ3Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-audio.so" size="141888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qzPlzZv5I1zuh3z55LSeYpCn6BYKSJ0Oll5VtZZskww=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-audio.so.2.5" size="141888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qzPlzZv5I1zuh3z55LSeYpCn6BYKSJ0Oll5VtZZskww=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-audio.so.2.5.1" size="141888">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qzPlzZv5I1zuh3z55LSeYpCn6BYKSJ0Oll5VtZZskww=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-graphics.so" size="471856">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CYplqPin5iBzEYV90iDEZwG5z6i76Mr1m+WJHzSwyj8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-graphics.so.2.5" size="471856">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CYplqPin5iBzEYV90iDEZwG5z6i76Mr1m+WJHzSwyj8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-graphics.so.2.5.1" size="471856">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CYplqPin5iBzEYV90iDEZwG5z6i76Mr1m+WJHzSwyj8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-system.so" size="65832">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yiCDv56kbNgQQ22zAcS346E9C2i+b0GpEfuRP04zsKE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-system.so.2.5" size="65832">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yiCDv56kbNgQQ22zAcS346E9C2i+b0GpEfuRP04zsKE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-system.so.2.5.1" size="65832">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yiCDv56kbNgQQ22zAcS346E9C2i+b0GpEfuRP04zsKE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-window.so" size="206704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d/TQuHCOy58WCVWUZaQSTmGJpBfKIp1qZWmpYlb7v3s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-window.so.2.5" size="206704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d/TQuHCOy58WCVWUZaQSTmGJpBfKIp1qZWmpYlb7v3s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\debian-x64\native\libsfml-window.so.2.5.1" size="206704">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d/TQuHCOy58WCVWUZaQSTmGJpBfKIp1qZWmpYlb7v3s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libcsfml-audio.so" size="62072">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LZCyblCj8+Cvfc4KMDpd7L5cOi2i6Qj1dOFazA9Vzhs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libcsfml-graphics.so" size="201760">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1dq9kxJJ/67+25UCpJZ9psN57mpGdsSXPjxTgOMrrgo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libcsfml-system.so" size="19384">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hU/kZ2pwDBvH6dhiL8YUDOWe8T4NR53TCZNFlk414mQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libcsfml-window.so" size="43032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OyQqp5O77dF1bXC/9g+5QQ+Jlr0LJTBPogwl/wPkbsc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-audio.so" size="149032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pOEzkoHk6HdVSZjfpqimRPoPhs3F2yVOWgp8NTxJGuU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-audio.so.2.5" size="149032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pOEzkoHk6HdVSZjfpqimRPoPhs3F2yVOWgp8NTxJGuU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-audio.so.2.5.1" size="149032">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pOEzkoHk6HdVSZjfpqimRPoPhs3F2yVOWgp8NTxJGuU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-graphics.so" size="407864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FMn+8JIwO0g8ipgebqTnxRbi5HANSekmMeYbnUpHR8s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-graphics.so.2.5" size="407864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FMn+8JIwO0g8ipgebqTnxRbi5HANSekmMeYbnUpHR8s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-graphics.so.2.5.1" size="407864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FMn+8JIwO0g8ipgebqTnxRbi5HANSekmMeYbnUpHR8s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-system.so" size="71408">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DWZSu4Bs61gTf5r9uUtfIjBpx0T4wnEDhrCJHJdCwr4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-system.so.2.5" size="71408">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DWZSu4Bs61gTf5r9uUtfIjBpx0T4wnEDhrCJHJdCwr4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-system.so.2.5.1" size="71408">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DWZSu4Bs61gTf5r9uUtfIjBpx0T4wnEDhrCJHJdCwr4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-window.so" size="199632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DI2oZluzZhojF2DSNXnUGlbcgul1h9fJxoLFiEx4vD0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-window.so.2.5" size="199632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DI2oZluzZhojF2DSNXnUGlbcgul1h9fJxoLFiEx4vD0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\fedora-x64\native\libsfml-window.so.2.5.1" size="199632">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DI2oZluzZhojF2DSNXnUGlbcgul1h9fJxoLFiEx4vD0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll" size="142456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+sgWygvV2cShdpOzdXWlq6kB2ZMTO2HXNEtZdHL6DCY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll" size="800896">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Oi6nknVbvkZ080nXhwrrkXSUrDn5ap5dliXUrGjcPsU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win\lib\net6.0\System.ServiceProcess.ServiceController.dll" size="68224">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>n827/ixXm5PTmCuUl4iz+1unlgWIN1exueqYQTNa/FU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\csfml-Audio.dll" size="1295360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JoF8gVePB/WKcD2L9JZtdDtG0lgyF/3KvSi+GFN+AmQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\csfml-Graphics.dll" size="1211392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eqTW3gHKXwZOfQWoYiyWTWVkHaEw3MwYKRMilHLsqWs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\csfml-System.dll" size="215040">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>W9clRxiC3CJC4ejAhzfg6agJ+aAbkB8dyPJ5p5HgTPQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\csfml-Window.dll" size="404992">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2OoDdl5a/JZMDoMlO5UD1qCfgLJ+/OVxijJTDAio7oA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x64\native\openal32.dll" size="669696">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4MLxgmcrcGZZsyuR773FtXp10kNo9djYYMEw3iGK7ec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\csfml-Audio.dll" size="1169920">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/gsA/8DhLCUOKPkCdRr8PSKUrB75nOIupyTG+LN23yc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\csfml-Graphics.dll" size="988160">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qLzmnNdTHooBsSFLgU12i0oYy6k+VAzrXkwO1/q71Qg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\csfml-System.dll" size="177664">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sg8RxIVVOPT1SeW7TPUCIFVQAPPA0v1NZUEg526ZoVk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\csfml-Window.dll" size="325120">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1u30JLWYMLOYUCExGwGGYWxF36JLmFNVF4binygJgGc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="runtimes\win-x86\native\openal32.dll" size="630784">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SfC2evE0H2nOxBlAUpwO9VFCAoL0cfD4aficxKtjV8c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SFML.Audio.dll" size="22016">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fhkhbr6fKWxEo760oFicstbw7UMU7tPOZxHg1K5KpHM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SFML.Graphics.dll" size="63488">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GfNKOPhQx51lliV/nshugdy324q9hEnTPZ9ihGm4iS8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SFML.System.dll" size="14336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MP9hfRA9P0JuKqbBD5JfeTgx4sMfgFZiLLROtlwLuj4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="SFML.Window.dll" size="32768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4yxyqmLQSupvuubv+DX6bQejjhv9Ahhg7uQU3LdB7es=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="System.Diagnostics.EventLog.dll" size="53880">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jiy1cn8U7r/esq7q3vBVaR/JGyMBm4aO1diifqa5ZJo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="System.ServiceProcess.ServiceController.dll" size="34960">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xe1HPvlxUyr2EzP/260Undoia3Eoc9c4EPpyBAXXUQw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=APPA-BOX\izimm" issuerKeyHash="26584af9e028cdd2cf7d750e629ba483a8dbde42" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>gE32gjlbuU7LlW0fw0w0Tei8XocR9WMl4a0YjUq2Qyo=</DigestValue></Reference></SignedInfo><SignatureValue>NoCfv0H53b9KpFjh8mG/g29TED4+9EFb/VzdmIZAPqHTNwF/gZuMfZH2NiICYq5CEdb1w1EtDJhHOyevS1AfWzG9NFsJRWU0IP8rupUQd0k1P84zjLykvAO7w8mS/nK2DCzzay0lO+0XQwYuZmfxkZVrdeoM/8OABamZPOtoQvA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1X+OTjAQMfbLXmMQZJC5Y4lu5i9u6fi5c4p9aMMggViOSc60I9KanBXK4sR2Lo2ZdRCNDI/kN0qM5/sKgz93uZ43X+CMP8/jWx8I9Od7T+9+jtv29JA08m/dEI7oPyiefoPVPUyajAq5c3weKqbAosTBLmtoflls63RAdqLpB/0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2a43b64a8d18ade12563f511875ebce84d344cc31f6d95cb4eb95b3982f64d80" Description="" Url=""><as:assemblyIdentity name="ObidoBingo.exe" version="1.0.0.1" publicKeyToken="91a004de99eef0a5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=APPA-BOX\izimm</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KCVhrjGoTghZMd4g4ecmN4ONOXM+Xouzp3PCGAnzYe0=</DigestValue></Reference></SignedInfo><SignatureValue>iqzOxxcsBO+19V2of+Z5Ue7vX/juF2YvgeU7wIHBnbVb9AQb4xEZ9IMzOKUQjhQt8Y7Iv/53ve6JR4ym9856Zrm+FXtD1tQ/rk3lddm0xQEtwhUnDbaqd29wTXPfX7H03PAiGcgVgW/4dndVESBHavml4OuHZms4EW+u0NThIt0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1X+OTjAQMfbLXmMQZJC5Y4lu5i9u6fi5c4p9aMMggViOSc60I9KanBXK4sR2Lo2ZdRCNDI/kN0qM5/sKgz93uZ43X+CMP8/jWx8I9Od7T+9+jtv29JA08m/dEI7oPyiefoPVPUyajAq5c3weKqbAosTBLmtoflls63RAdqLpB/0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQNNtSogfy1JNI6tvCDhPZmTANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwAQQBQAFAAQQAtAEIATwBYAFwAaQB6AGkAbQBtMB4XDTI0MTAwNzA1MjcxOFoXDTI1MTAwNzExMjcxOFowJzElMCMGA1UEAx4cAEEAUABQAEEALQBCAE8AWABcAGkAegBpAG0AbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA1X+OTjAQMfbLXmMQZJC5Y4lu5i9u6fi5c4p9aMMggViOSc60I9KanBXK4sR2Lo2ZdRCNDI/kN0qM5/sKgz93uZ43X+CMP8/jWx8I9Od7T+9+jtv29JA08m/dEI7oPyiefoPVPUyajAq5c3weKqbAosTBLmtoflls63RAdqLpB/0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQB55BahxYfgYexd2n0OKkIcLIzaXo2MUn3bdwOG7FogS/hWEuKEvVEYse5lNpq+HvZNFQ6Gak7H4AiXuutyJY0wNxNSjWYRqeOKiTBW2b+DUWji+aGwu7cqkL6xwb11RWE7GEkjlN1TsBJ77JgYi8PF7x+VNdjsK0NA73EAQDg+Tg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
