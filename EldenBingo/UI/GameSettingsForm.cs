@@ -29,5 +29,6 @@ namespace ObidoBingo.UI
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
     }
 }

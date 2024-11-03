@@ -45,6 +45,7 @@
             panel3 = new Panel();
             panel4 = new Panel();
             panel6 = new Panel();
+            _requiredSquares = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)_maxCategoryUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_randomSeedUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)_preparationTimeUpDown).BeginInit();
@@ -70,7 +71,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(4, 4);
             label2.Name = "label2";
-            label2.Size = new Size(169, 15);
+            label2.Size = new Size(168, 15);
             label2.TabIndex = 19;
             label2.Text = "Max squares in same category:";
             // 
@@ -216,17 +217,31 @@
             panel6.Size = new Size(239, 30);
             panel6.TabIndex = 18;
             // 
+            // _requiredSquares
+            // 
+            _requiredSquares.AutoSize = true;
+            _requiredSquares.CheckAlign = ContentAlignment.MiddleRight;
+            _requiredSquares.Checked = true;
+            _requiredSquares.CheckState = CheckState.Checked;
+            _requiredSquares.Location = new Point(4, 151);
+            _requiredSquares.Name = "_requiredSquares";
+            _requiredSquares.Size = new Size(205, 19);
+            _requiredSquares.TabIndex = 19;
+            _requiredSquares.Text = "Check if there are required squars:";
+            _requiredSquares.UseVisualStyleBackColor = true;
+            // 
             // GameSettingsControl
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            Controls.Add(_requiredSquares);
             Controls.Add(panel6);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "GameSettingsControl";
-            Size = new Size(239, 154);
+            Size = new Size(239, 179);
             ((System.ComponentModel.ISupportInitialize)_maxCategoryUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)_randomSeedUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)_preparationTimeUpDown).EndInit();
@@ -242,6 +257,7 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -263,5 +279,6 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel6;
+        private CheckBox _requiredSquares;
     }
 }

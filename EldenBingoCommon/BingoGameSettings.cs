@@ -1,4 +1,4 @@
 ﻿namespace ObidoBingoCommon
 {
-    public record struct BingoGameSettings(int BoardSize, int CategoryLimit, int RandomSeed, int PreparationTime, int PointsPerBingoLine);
+    public record struct BingoGameSettings(int BoardSize, int CategoryLimit, int RandomSeed, int PreparationTime, int PointsPerBingoLine, bool RequiredSquares);
 }

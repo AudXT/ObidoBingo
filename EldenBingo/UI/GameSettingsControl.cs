@@ -1,4 +1,5 @@
-﻿using ObidoBingoCommon;
+﻿using Newtonsoft.Json.Linq;
+using ObidoBingoCommon;
 
 namespace ObidoBingo.UI
 {
@@ -18,6 +19,12 @@ namespace ObidoBingo.UI
             set { _boardSizeComboBox.SelectedIndex = value - 3; }
         }
 
+        public bool RequiredSquares
+        {
+            get { return _requiredSquares.Checked; }
+            set { _requiredSquares.Checked = value; }
+        }
+
         public Action? SeedChanged;
 
         public BingoGameSettings Settings
@@ -29,7 +36,8 @@ namespace ObidoBingo.UI
                     Convert.ToInt32(_maxCategoryUpDown.Value),//Max number of squares in the same category
                     Convert.ToInt32(_randomSeedUpDown.Value), //Random seed
                     Convert.ToInt32(_preparationTimeUpDown.Value), //Preparation time in seconds
-                    Convert.ToInt32(_bonusPointsUpDown.Value) //Bonus points for a bingo line
+                    Convert.ToInt32(_bonusPointsUpDown.Value), //Bonus points for a bingo line
+                    RequiredSquares
                 );
             }
             set
@@ -39,6 +47,7 @@ namespace ObidoBingo.UI
                 _randomSeedUpDown.Value = value.RandomSeed;
                 _preparationTimeUpDown.Value = value.PreparationTime;
                 _bonusPointsUpDown.Value = value.PointsPerBingoLine;
+                _requiredSquares.Checked = value.RequiredSquares;
             }
         }
 

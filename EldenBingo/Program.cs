@@ -34,12 +34,12 @@ namespace ObidoBingo
             {
                 Properties.Settings.Default.Save();
             }
-            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(EldenBingo_UnhandledException);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(ObidoBingo_UnhandledException);
             _mainForm = new MainForm();
             Application.Run(_mainForm);
         }
 
-        private static void EldenBingo_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        private static void ObidoBingo_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             void showError()
             {

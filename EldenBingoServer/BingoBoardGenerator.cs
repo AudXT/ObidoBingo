@@ -64,12 +64,25 @@ namespace ObidoBingoServer
         }
 
         public int CategoryLimit { get; set; }
+        public bool RequiredSquares { get; set; }
 
         public ServerBingoBoard? CreateBingoBoard(ServerRoom room)
         {
             var squareQueue = new Queue<BingoJsonObj>(shuffleList(_list, _random));
             var squares = new List<BingoJsonObj>();
             var categoryCount = new Dictionary<string, int>();
+
+            if (RequiredSquares)
+            {
+                var requiredSquares = squareQueue.Where(s => s.Weight > 1).ToList();
+                if (requiredSquares.Count > 0)
+                {
+                    foreach (var requiredSquare in requiredSquares)
+                    {
+                        squares.Add(requiredSquare);
+                    }
+                }
+            }
 
             var numSquares = room.GameSettings.BoardSize * room.GameSettings.BoardSize;
             bool anySquareFailedCategoryLimit = false;

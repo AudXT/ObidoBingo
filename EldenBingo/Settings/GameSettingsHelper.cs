@@ -29,7 +29,8 @@ namespace ObidoBingo.Settings
                 settings.GS_CategoryLimit,
                 settings.GS_RandomSeed,
                 settings.GS_PreparationTime,
-                settings.GS_BonusPerBingo);
+                settings.GS_BonusPerBingo,
+                settings.GS_RequiredSquares);
 
             return gameSettings;
         }
@@ -41,6 +42,7 @@ namespace ObidoBingo.Settings
             settings.GS_RandomSeed = gameSettings.RandomSeed;
             settings.GS_PreparationTime = gameSettings.PreparationTime;
             settings.GS_BonusPerBingo = gameSettings.PointsPerBingoLine;
+            settings.GS_RequiredSquares = gameSettings.RequiredSquares;
             settings.Save();
         }
     }

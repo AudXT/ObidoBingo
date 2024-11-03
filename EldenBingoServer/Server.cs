@@ -425,6 +425,7 @@ namespace ObidoBingoServer
             {
                 var bg = new BingoBoardGenerator(bingoJson.Json, sender.Room.GameSettings.RandomSeed);
                 bg.CategoryLimit = sender.Room.GameSettings.CategoryLimit;
+                bg.RequiredSquares = sender.Room.GameSettings.RequiredSquares;
                 sender.Room.BoardGenerator = bg;
                 //Don't update bingo board if match is running
                 if (sender.Room.Match.MatchStatus == MatchStatus.NotRunning || sender.Room.Match.MatchStatus == MatchStatus.Finished)
@@ -663,6 +664,7 @@ namespace ObidoBingoServer
                 //Update the current board generator with the new random seed
                 sender.Room.BoardGenerator.RandomSeed = settings.RandomSeed;
                 sender.Room.BoardGenerator.CategoryLimit = settings.CategoryLimit;
+                sender.Room.BoardGenerator.RequiredSquares = settings.RequiredSquares;
             }
             if (oldScorePerBingo != settings.PointsPerBingoLine)
             {

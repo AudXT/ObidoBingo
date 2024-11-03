@@ -321,6 +321,11 @@ namespace ObidoBingo.UI
                         record.Add("category", csvRecord.Game);
                     }
 
+                    if(csvRecord.Required.ToLower() == "yes")
+                    {
+                        record.Add("weight", 2);
+                    }
+
                     record.Add("name", $"{csvRecord.Game}: {csvRecord.Challenge}");
                     records.Add(record);
                 }
@@ -337,6 +342,7 @@ namespace ObidoBingo.UI
             public string Completed { get; set; }
             public string Excluded { get; set; }
             public string Categories { get; set; }
+            public string Required { get; set; }
         }
 
 

@@ -44,7 +44,7 @@ namespace EldenBingoServerStandalone
             else
             {
                 string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                string appSpecificFolder = Path.Combine(appDataFolder, "EldenBingo");
+                string appSpecificFolder = Path.Combine(appDataFolder, "ObidoBingo");
 
                 if (!Directory.Exists(appSpecificFolder))
                 {
@@ -52,29 +52,51 @@ namespace EldenBingoServerStandalone
                 }
                 _jsonFile = Path.Combine(appSpecificFolder, "serverData.json");
             }
+
             _server = new Server(port, _jsonFile);
             _server.OnError += server_OnError;
             _server.OnStatus += server_OnStatus;
             _server.Host();
+
             output("Press 'k' to list all keyboard commands", InfoColor);
 
-            _keyboardListenThread = new Thread(new ThreadStart(listenKeyBoardEvent));
-            _keyboardListenThread.Start();
-            _readInput = true;
-            var waitHandle = new ManualResetEvent(false);
-
-            Console.CancelKeyPress += async (o, e) =>
+            if (Environment.UserInteractive)
             {
-                e.Cancel = true;
-                _stopCalled = true;
-                output("Stopping server...", StatusColor);
-                await _server.Stop();
-                waitHandle.Set();
-            };
-            waitHandle.WaitOne();
-        }
+                // Only start the keyboard listener in interactive mode
+                _keyboardListenThread = new Thread(new ThreadStart(listenKeyBoardEvent));
+                _keyboardListenThread.Start();
+                _readInput = true;
 
-        private static void log(string text)
+                var waitHandle = new ManualResetEvent(false);
+
+                Console.CancelKeyPress += async (o, e) =>
+                {
+                    e.Cancel = true;
+                    _stopCalled = true;
+                    output("Stopping server...", StatusColor);
+                    await _server.Stop();
+                    waitHandle.Set();
+                };
+
+                waitHandle.WaitOne();
+            }
+            else
+            {
+                // Non-interactive mode: PM2-friendly setup
+                output("Running in non-interactive mode", InfoColor);
+                _server.OnError += (sender, e) => output($"Error: {e.Message}", ErrorColor);
+                _server.OnStatus += (sender, e) => output(e.Message, StatusColor);
+
+                // Continue running the server without listening for keyboard input
+                while (!_stopCalled)
+                {
+                    Thread.Sleep(1000);  // Prevent the application from exiting
+                }
+            }
+        }
+    
+
+    private static void log(string text)
         {
             var timestamp = DateTime.Now.ToString();
             File.AppendAllText("log.txt", $"[{timestamp}] {text}{Environment.NewLine}");
@@ -91,6 +113,12 @@ namespace EldenBingoServerStandalone
 
         private static void listenKeyBoardEvent()
         {
+            // Exit immediately if not in an interactive environment
+            if (!Environment.UserInteractive || Console.IsInputRedirected)
+            {
+                return;
+            }
+
             while (!_stopCalled)
             {
                 if (_readInput && Console.KeyAvailable)
@@ -103,6 +131,7 @@ namespace EldenBingoServerStandalone
                 }
                 Thread.Sleep(50);
             }
+            
         }
 
         private static void showShortcuts()

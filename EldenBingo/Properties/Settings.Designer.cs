@@ -514,7 +514,22 @@ namespace ObidoBingo.Properties {
                 this["GS_BonusPerBingo"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GS_RequiredSquares
+        {
+            get
+            {
+                return ((bool)(this["GS_RequiredSquares"]));
+            }
+            set
+            {
+                this["GS_RequiredSquares"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
